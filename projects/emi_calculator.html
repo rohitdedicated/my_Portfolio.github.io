@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <title>EMI Calculator</title>
+    <script>
+        function AmountChange(){
+            document.getElementById("txtAmount").value=document.getElementById("rangeAmount").value;
+        }
+        function YearChange(){
+            document.getElementById("txtYear").value=document.getElementById("rangeYear").value;
+        }
+        function RateChange(){
+            document.getElementById("txtInterest").value=document.getElementById("changeRate").value;
+        }
+        function CalculateClick(){
+            var s=parseInt(document.getElementById("txtAmount").value);
+            var r=parseInt(document.getElementById("txtInterest").value)/100/12;
+            var n=parseFloat(document.getElementById("txtYear").value)*12;
+        var emi = s *r/(1-(Math.pow(1/(1+r),n)));
+        document.getElementById("result").innerHTML=`EMI per Month ${Math.round(emi)}`;
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h2 class="text-center mb-4 mt-5">Personal Loan EMI Calculator</h2>
+    <div class="row ms-5 me-5">
+        <div class="col input-group">
+            <span class="input-group-text">Amount you need:</span><input type="text" id="txtAmount" class="form-control">
+        </div>
+        <div class="col input-group">
+            <span class="input-group-text">for</span><input type="text" id="txtYear" class="form-control"><span class="input-group-text">years</span>
+        </div>
+        <div class="col input-group">
+            <span class="input-group-text">Interest rate</span><input type="text" id="txtInterest" class="form-control"><span class="input-group-text">%</span>
+        </div>
+    </div>
+    <div class="row mt-3 ms-5 me-5">
+        <div class="col input-group ms-5">
+            50000/-<input type="range" value="50000" onchange="AmountChange()" id="rangeAmount" min="50000" max="1000000">10,00,000/
+        </div>
+        <div class="col input-group ms-5">
+            3 <input type="range" id="rangeYear" onchange="YearChange()" min="3" max="7">7
+        </div>
+        <div class="col input-group ms-5 mb-5">
+            8% <input min="8" max="16" type="range" value="8" step="0.1" id="changeRate" onchange="RateChange()">16%
+        </div>
+    </div>
+    <div class="row mt-5 justify-content-center text-center">
+        <div class="col">
+            <button class="btn btn-primary btn-lg bg-danger mb-5" onclick="CalculateClick()">Calculate</button>
+        </div>
+    </div>
+    <h1 id="result" align="center" class="bg-danger p-3"></h1>
+</body>
+</html>

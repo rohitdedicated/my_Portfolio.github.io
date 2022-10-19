@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="public/responsive-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="apple-touch-icon" sizes="120x120" href="./src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon-16x16.png">
+    <link rel="manifest" href="./src/site.webmanifest">
+    <link rel="mask-icon" href="./src/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head>
+
+<body onload="bodyload()">
+    <header class="header">
+        <a href="#" target="_blank" class="logo">PortFo<span style="color: rgb(82, 4, 4);">lio</span></a>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="#home" class="navbar-link"><span class="bi bi-house-fill"></span> Home </a></li>
+                <li><a href="#skills" class="navbar-link"><span class="bi bi-journal-code"></span> Skills </a></li>
+                <li><a href="#projects" class="navbar-link"><span class="bi bi-cast"></span> Projects</a></li>
+                <li><a href="#contact" class="navbar-link"><span class="bi bi-telephone-fill"></span> Contact </a></li>
+                <li><a href="#hire-me" data-bs-target="#hire-me" data-bs-toggle="modal" class="btn-hire navbar-btn">Hire
+                        me</a></li>
+            </ul>
+        </nav>
+        <!---.............................................---->
+        <div class="mobile-navbar-btn">
+            <ion-icon name="menu" class="mobile-nav-icon"></ion-icon>
+            <ion-icon name="close" class="mobile-nav-icon"></ion-icon>
+        </div>
+    </header>
+    <div>
+        <div class="btn-toolbar justify-content-between bg-white text-black">
+            <div class="btn-group">
+                <button class="btn ">
+                    <span id="time"></span>
+                </button>
+            </div>
+            <div class="btn-group">
+                <button class="btn">
+                    <span id="icon"></span>
+                    <span id="salute"></span>
+                </button>
+            </div>
+            <div class="btn-group">
+                <button class="btn">
+                    <span id="date"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="section section-hero" id="home" data-aos="fade-right">
+            <div class="container grid grid-two-column">
+                <div class="hero-data">
+                    <div class="home-content">
+                        <div class="text-1">Hello,my name is</div>
+                        <div class="text-2">Rohit Kumar</div>
+                        <div class="text-3">And I,m a <span class="typed"></span></div>
+                    </div>
+                    <a href="./src/Rohit's Resume.pdf" type="file" target="_blank" class="btn-resume"
+                        style="font-weight: bold;">Download Resume</a>
+                    <div class="para-1 mt-5" style="text-align:justify;">
+                        <p>I love what I do and I do what our clients love & work with great clients all over the
+                            world to create thoughtful and purposeful websites.</p>
+                    </div>
+                </div>
+                <!-- right side hero section  -->
+                <div class="hero-image">
+                    <img src="images/image.jfif" alt="my_image" class="image" />
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <section class="section section-hero" id="skills" data-aos="fade-right">
+        <div class="skills-bar">
+            <div class="bar">
+                <div class="info">
+                    <span>HTML</span>
+                </div>
+                <div class="progress-line html"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>CSS</span>
+                </div>
+                <div class="progress-line css"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>BootStrap</span>
+                </div>
+                <div class="progress-line bootstrap"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>Sass</span>
+                </div>
+                <div class="progress-line sass"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>JavaScript</span>
+                </div>
+                <div class="progress-line js"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>jQuery,Ajax</span>
+                </div>
+                <div class="progress-line ja"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>React.js</span>
+                </div>
+                <div class="progress-line react"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>Node.js</span>
+                </div>
+                <div class="progress-line node"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>Express.js</span>
+                </div>
+                <div class="progress-line express"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">
+                    <span>MongoDB</span>
+                </div>
+                <div class="progress-line mongo"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-hero justify-content-center text-center" id="projects" data-aos="fade-right">
+        <div class="heading-projects">
+            <div style="border:1px solid grey ;"></div>
+            <h1 class="pro-heading mb-5"><span style="color:crimson;">My</span> Projects</h1>
+            <div class="d-flex flex-wrap">
+                <div class="container-p">
+
+                    <div class="content-p">
+                        <a href="./projects/crud.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/CRUD.PNG" height="280px" alt="CRUD" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>CRUD Operation</h3>
+                                <p>User can Insert,Update and the Data</p>
+                                <button class="btn btn-danger" href="./projects/crud.html">View Project</button>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="content-p">
+                        <a href="./projects/hotel.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/Hotel.PNG" height="280px" alt="Hotel" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>Hotel Registration</h3>
+                                <p>User can Book room by own choice and adding extra the cost will be increased.</p>
+                                <button class="btn btn-danger" href="./projects/hotel.html">View Project</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="content-p">
+                        <a href="./projects/netflix.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/netflix.PNG" height="280px" alt="netflix" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>Netflix Clone</h3>
+                                <p>I Design Netflix Clone using HTML,CSS and Bootstrap.</p>
+                                <button class="btn btn-danger" href="./projects/netflix.html">View Project</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-p">
+                        <a href="./projects/emi_calculator.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/emi.PNG" height="280px" alt="emi" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>EMI Calculator</h3>
+                                <p>User can enter some amount and view per month emi Cost.</p>
+                                <button class="btn btn-danger" href="./projects/emi_calculator.html">View
+                                    Project</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-p">
+                        <a href="./projects/kfc.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/kfc.PNG" height="280px" alt="kfc" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>KFC</h3>
+                                <p>User can order the food and by selecting the food items the cost will be increased.
+                                </p>
+                                <button class="btn btn-danger" href="./projects/kfc.html">View Project</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-p">
+                        <a href="./projects/instagram_login.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/instagram_login.PNG" height="280px" alt="instagram"
+                                class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>Instagram Login Page</h3>
+                                <p>I Design Instagram Login Page using HTML,CSS and Bootstrap.</p>
+                                <button class="btn btn-danger" href="./projects/instagram_login.html">View
+                                    Project</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-p">
+                        <a href="./projects/e-commerce.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/Shopping Online.PNG" height="280px" alt="Shopping" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>E-Commerce Shopping Site</h3>
+                                <p>User can add item into carts and view it..</p>
+                                <button class="btn btn-danger" href="./projects/e-commerce.html">View Project</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-p">
+                        <a href="./projects/Mars rover using Card_Style.html" target="_blank">
+                            <div class="content-overlay"></div>
+                            <img src="./images/mars_rover.PNG" height="280px" alt="amazon_login" class="content-image">
+                            <div class="content-details fadeIn-top">
+                                <h3>MARS ROVER PHOTOS Using NASA API.</h3>
+                                <p>In this project API Data comes from NASA API..</p>
+                                <button class="btn btn-danger" href="./projects/Mars rover using Card_Style.html">View
+                                    Project</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="contact container-fluid" data-aos="fade-right">
+        <div class="main-content">
+            <div class="left box">
+                <h2>About me</h2>
+                <div style="border: 1px solid crimson;"></div>
+                <div class="content">
+                    <p>I’m a web developer.I spend my whole day,practically every day,experimenting with
+                        HTML,CSS,BootStrap,JavaScript,jQuery,Ajax,Express.js,Node.js,MongoDB. I build websites that
+                        delight and inform. I do it well.</p>
+                    <div class="social mb-3">
+                        <h2>Connect with me..</h2>
+                        <div style="border: 1px solid crimson;"></div>
+                        <a href="https://www.linkedin.com/in/rohit-kumar-576750204/" target="_blank"><span
+                                class="bi bi-linkedin"></span></a>
+                        <a href="https://www.instagram.com/user/meet__r_o_h_i_t/" target="_blank"><span
+                                class="bi bi-instagram"></span></a>
+                        <a href="https://twitter.com/RohitSi83965658" target="_blank"><span
+                                class="bi bi-twitter"></span></a>
+                        <a href="https://github.com/rohitdedicated" target="_blank"><span
+                                class="bi bi-github"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div style="border: 1px solid crimson;"></div>
+                <div class="content">
+                    <div class="place">
+                        <span class="bi bi-geo-alt"></span>
+                        <span class="text" style="color: crimson;">Hyderabad,Telangana</span>
+                    </div>
+                    <div class="phone">
+                        <span class="bi bi-phone-fill"></span>
+                        <span class="text"><a href="tel:+91-6299376781"
+                                style="color: crimson;">+91-6299376781</a></span>
+                    </div>
+                    <div class="email">
+                        <span class="bi bi-envelope"></span>
+                        <span class="text"><a href="mailto:rohit.dedicated@gmail.com"
+                                style="color: crimson;">rohit.dedicated@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Contact me</h2>
+                <div style="border: 1px solid crimson;"></div>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" class="size form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="msg mb-4">
+                            <div class="text">Message *</div>
+                            <textarea cols="25" rows="2" class="size-msg form-control" required></textarea>
+                        </div>
+                        <button class="btn btn-danger btn-lg mb-5">Send</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="bi-arrow-up-circle-fill btn-arrow box" onclick="btnClick()"></div>
+        </div>
+
+        <div class="copyrights box">
+            <div class="copy">&copy; Copyrights 2022 Rohit Kumar</div>
+        </div>
+    </footer>
+    <!---...............................................................Modal section........................................................-->
+    <div class="modal fade" id="hire-me">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Enter Your Details</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Name*</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Email*</dt>
+                        <dd><input type="email" class="form-control"></dd>
+                        <dt>Contact no</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Send</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script src="public/style.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000
+        });
+    </script>
+</body>
+
+</html>

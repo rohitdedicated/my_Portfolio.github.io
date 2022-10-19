@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <title>Amazon Login</title>
+    <script>
+        var userDetails={
+            Email:"john121@gmail.com",
+            Phone:"6299376781",
+            Password:"john121@@"
+        }
+
+        var flag="";
+        function ContinueClick(){
+            var userid=document.getElementById("txtUserId").value;
+            if(userid==userDetails.Email){
+                flag=`Login Success with your Email ${userid}`;
+                document.getElementById("passwrdContainer").style.display="block";
+                document.getElementById("userContainer").style.display="none";
+            }
+            else if(userid==userDetails.Phone){
+                flag=`OTP send to your mobile ${userid}`;
+                document.getElementById("passwrdContainer").style.display="block";
+                document.getElementById("userContainer").style.display="none";
+            }
+            else{
+                document.getElementById("UserError").innerHTML="Invalid email or mobile";
+            }
+        }
+        function LoginClick(){
+            var pwd=document.getElementById("txtPwd").value;
+            if(pwd==userDetails.Password){
+                document.write(`<h2>${flag}</h2>`);
+            }else{
+                document.getElementById("pwdError").innerHTML="Invalid Password";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center" style="height:500px;">
+        <div class="border border-2 border-dark rounded-3 p-3" style="width:300px;">
+            <h2>Sign in</h2>
+            <div id="userContainer">
+                <label class="form-label">Email or phone number</label>
+                <div>
+                    <input type="text" class="form-control" id="txtUserId">
+                    <div id="UserError" class="text-danger"></div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-warning w-100" onclick="ContinueClick()">Continue</button>
+                </div>
+            </div>
+            <div id="passwrdContainer" style="display:none;">
+                <label class="form-control">Password</label>
+                <div>
+                    <input type="password" id="txtPwd" class="form-control">
+                    <div id="pwdError" class="text-danger"></div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-warning w-100" onclick="LoginClick()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
